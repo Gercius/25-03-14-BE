@@ -33,12 +33,8 @@ const autoMechanicSchema = new mongoose.Schema({
         ref: "AutoRepairShop",
         required: [true, "Auto repair shop is required"],
     },
-    imageUrl: {
-        type: String,
-    },
     rating: {
         type: Number,
-        required: [true, "Rating is required"],
         min: 0,
     },
     createdAt: {
