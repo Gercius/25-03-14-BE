@@ -56,5 +56,5 @@ autoMechanicSchema.pre("findOneAndUpdate", function (next) {
     next();
 });
 
-const AutoMechanic = mongoose.model("AutoMechanic", autoMechanicSchema, "auto_mechanic");
+const AutoMechanic = mongoose.model("AutoMechanic", autoMechanicSchema, "auto_mechanics");
 module.exports = AutoMechanic;

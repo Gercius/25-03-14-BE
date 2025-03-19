@@ -28,5 +28,5 @@ autoRepairShopSchema.pre("findOneAndUpdate", function (next) {
     next();
 });
 
-const AutoRepairShop = mongoose.model("AutoRepairShop", autoRepairShopSchema, "auto_repair_shop");
+const AutoRepairShop = mongoose.model("AutoRepairShop", autoRepairShopSchema, "auto_repair_shops");
 module.exports = AutoRepairShop;
