@@ -2,7 +2,7 @@ const AutoMechanic = require("../models/autoMechanicModel");
 
 exports.getAllMechanics = async (req, res) => {
     try {
-        const mechanics = await AutoMechanic.find();
+        const mechanics = await AutoMechanic.find().populate("autoRepairShop", "name");
 
         if (!mechanics.length) {
             return res.status(404).json({
@@ -26,7 +26,7 @@ exports.getAllMechanics = async (req, res) => {
 
 exports.getMechanic = async (req, res) => {
     try {
-        const mechanic = await AutoMechanic.findById(req.params.id);
+        const mechanic = await AutoMechanic.findById(req.params.id).populate("autoRepairShop", "name");
 
         if (!mechanic) {
             return res.status(404).json({
